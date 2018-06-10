@@ -8,5 +8,5 @@ from .models import Service
 class ServicesView(ListView):
     model = Service
     template_name = 'services/services.html'
-    paginate_by = 10
     context_object_name = 'services_list'
+    paginate_by = 5

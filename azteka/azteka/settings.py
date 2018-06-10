@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'services.apps.ServicesConfig',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'ckeditor',
+    'social.apps.SocialConfig',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.context_processor.context_processor'
             ],
         },
     },
@@ -126,3 +129,12 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+#Ckeditor config
+'''
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None
+    }
+}'''
